@@ -166,7 +166,7 @@ Benefits:
 
 This document provides a brief introduction and summary of a classroom activity designed to demonstrate how digital communication systems work in practice. The focus is on a simple transmitter using [***16QAM***](#glossary-of-key-terms)   modulation combined with [***OFDM***](#glossary-of-key-terms)   over [***4 subcarriers***](#glossary-of-key-terms-background-knowledge). The goal is to help readers, especially students, understand how binary data is processed and transformed step by step into a physical signal ready for transmission. The explanation includes key background concepts, definitions of variables, and a clear breakdown of the operations performed in the provided Python code.
 
-[***^***](#introduction-and-motivation)
+[**>**](#toc-modulador-16qam-4ofdm) 
 
 # **General Summary of What Was Done (16QAM with 4 OFDM Subcarriers)**
 
