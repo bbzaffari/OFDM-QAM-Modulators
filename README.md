@@ -206,7 +206,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Graphs real part over time.
    * Indicates OFDM block divisions.
 ---
-# **TOC (Modulador 802.11ax[*** ***](#glossary-of-key-terms)    64QAM)**
+# **TOC (Modulador 802.11ax 64QAM)**
 
 1. [In a nutshell (Modulador 802.11ax 64QAM)](#in-a-nutshell-modulador-80211ax-64qam)
 2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms)   
