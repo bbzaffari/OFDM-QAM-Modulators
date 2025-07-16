@@ -124,6 +124,7 @@ Benefits:
 > **Reflection:** Gray mapping is like designing a keyboard where neighboring keys cause minimal typos — small slips lead to minor, not catastrophic, errors.
 
 [***^***](#introduction-and-motivation)
+
 ---
 ---
 
@@ -136,6 +137,9 @@ Benefits:
 * **s:** Complex symbol calculated as A\_j \* e^(j \* theta\_j).
 * **X\[k]:** Frequency-domain vector before IFFT; holds the mapped data and pilots per subcarrier k.
 * **x\[n]:** Time-domain signal (OFDM symbol) after IFFT.
+  
+[***^***](#introduction-and-motivation)
+
 ---
 # TOC (Modulador 16QAM 4OFDM)
 1. [In a Nutshell (Modulador 16QAM 4OFDM)](#in-a-nutshell-modulador-16qam-4ofdm)  
@@ -156,11 +160,15 @@ Benefits:
 
 This document provides a brief introduction and summary of a classroom activity designed to demonstrate how digital communication systems work in practice. The focus is on a simple transmitter using [***16QAM***](#glossary-of-key-terms)   modulation combined with [***OFDM***](#glossary-of-key-terms)   over [***4 subcarriers***](#glossary-of-key-terms-background-knowledge). The goal is to help readers, especially students, understand how binary data is processed and transformed step by step into a physical signal ready for transmission. The explanation includes key background concepts, definitions of variables, and a clear breakdown of the operations performed in the provided Python code.
 
+[***^***](#introduction-and-motivation)
+
 # **General Summary of What Was Done (16QAM with 4 OFDM Subcarriers)**
 
 We developed and analyzed a modulation system combining [***16QAM***](#glossary-of-key-terms)  with [***OFDM***](#glossary-of-key-terms)  using [***4 subcarriers***](#glossary-of-key-terms-background-knowledge). The idea was to take a 64-bit binary sequence, modulate it into [***16QAM symbols***](#glossary-of-key-terms-background-knowledge), organize these symbols into [***OFDM***](#glossary-of-key-terms)   subcarriers, generate the time-domain signal via IFFT, and visualize all intermediate steps both numerically and graphically.
 
 The goal was to understand how binary data becomes a transmitted signal, following each classic stage of a digital transmitter.
+
+[***^***](#introduction-and-motivation)
 
 # **Step-by-Step Summary (Bullet Points of Internal Activities)**
 
@@ -169,6 +177,9 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Converts user input decimal number to a 64-bit binary string.
    * Each 4-bit block corresponds to a 16QAM symbol.
 ---
+
+[***^***](#introduction-and-motivation)
+
 ## 5.2. 16QAM Mapping (Modulation)
 
    * For each 4-bit group, retrieves:
@@ -176,6 +187,9 @@ The goal was to understand how binary data becomes a transmitted signal, followi
      * I/Q values for plotting.
      * Amplitude A\_j and phase theta\_j for symbol calculation.
    * Computes s = A\_j \* e^(j^theta\_j).
+
+[***^***](#introduction-and-motivation)
+
 ---
 ## 5.3. Detailed Symbol Output
 
@@ -206,6 +220,9 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 
    * Graphs real part over time.
    * Indicates OFDM block divisions.
+
+[***^***](#introduction-and-motivation)
+
 ---
 # **TOC (Modulador 802.11ax 64QAM)**
 
@@ -233,6 +250,8 @@ This document describes a Python script implementing an [***OFDM (Orthogonal Fre
 
 This process allows end-to-end simulation of the digital modulation process, connecting data layers to the physical signal.
 
+[***^***](#introduction-and-motivation)
+
 # General Structure and Layers
 
 This script simulates the end-to-end operation of the digital transmitter side of a Wi-Fi 802.11ax system, organized into three functional layers:
@@ -245,6 +264,8 @@ This script simulates the end-to-end operation of the digital transmitter side o
 
 3. Time Layer → Transmission Signal
    Converts to time domain via IFFT and adds a cyclic prefix to combat inter-symbol interference (ISI).
+
+[***^***](#introduction-and-motivation)
 
 Summary pipeline:
 raw bits → symbols → spectrum → time-domain signal ready for antenna
@@ -261,6 +282,8 @@ It:
 
 Its purpose is to help understand digital transformations at the transmitter, exploring concepts like symbol mapping, OFDM assembly, and spectral analysis.
 
+
+[***^***](#introduction-and-motivation)
 
 # Description of the Six Activities in the 802.11ax Modulator with 64-QAM
    
@@ -279,6 +302,8 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Technical reflection:`**
    Without normalization, simulations would distort gain, efficiency, and BER evaluations. In real systems, every dB counts.
    
+[***^***](#introduction-and-motivation)
+
 ---
 
 ## 6.2 Validate and Modulate Decimal Input
@@ -293,7 +318,9 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Didactic analogy:`**
    It is like translating words into map coordinates — without this step, you cannot turn digital information into physical signals.
-     
+
+[***^***](#introduction-and-motivation)
+
 ---
 
 ## 6.3 Plot Constellation
@@ -308,6 +335,8 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Technical reflection:`**
    In research and teaching, a good plot is worth a thousand words. It reveals distortions, symmetries, or bugs.
+
+[***^***](#introduction-and-motivation)
    
 ---
 
@@ -323,6 +352,8 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Technical note:`**
    Indices like N-26, N-25 represent negative subcarriers centered at zero, following FFT conventions.
+
+[***^***](#introduction-and-motivation)
    
 ---
 
@@ -338,6 +369,8 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Engineering reflection:`**
    The spectrum is the system’s fingerprint. Any allocation failure shows up here.
+
+[***^***](#introduction-and-motivation)
    
 ---
 
@@ -353,6 +386,8 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Deeper reflection:`**
    The cyclic prefix is an ingenious solution: it sacrifices some spectral efficiency to massively increase robustness — a classic engineering trade-off between practicality and efficiency.
+
+[***^***](#introduction-and-motivation)
 
 ---
 ---
@@ -373,6 +408,8 @@ The Python codes not only allowed generation and visualization of constellation 
 
 This experience reinforces the essential role of computational simulation in learning modern communication systems, bridging theoretical understanding with hands-on practice. It also highlights the technological progress up to the 802.11ax standard, which incorporates **64QAM**, **Orthogonal Frequency Division Multiple Access (OFDMA)**, and advanced spectral efficiency techniques to support multiple users and high data rates.
 
+[***^***](#introduction-and-motivation)
+
 ---
 
 # Reflection
@@ -383,6 +420,8 @@ Mastering these fundamental building blocks opens the door to more advanced chal
 - Adding **selective fading channel models** to simulate real-world multipath propagation effects;
 - Analyzing **Bit Error Rate (BER)** performance curves for different modulation schemes (e.g., comparing 16QAM vs. 64QAM) under varying signal-to-noise ratios (SNR);
 - Exploring **Software-Defined Radio (SDR)** platforms to implement these algorithms in real-time on hardware, enabling over-the-air transmission and reception.
+
+[***^***](#introduction-and-motivation)
 
 
 
