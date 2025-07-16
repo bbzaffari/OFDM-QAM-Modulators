@@ -5,7 +5,7 @@ This activity explores how digital transmitters work using two key setups provid
 The first uses 16QAM with 4 OFDM subcarriers, showing step by step how a binary sequence (64 bits) is mapped into modulation symbols, combined across subcarriers, processed via IFFT, and turned into a time-domain signal. It helps students understand basic digital transmission blocks and visualize the constellation, frequency spectrum, and output waveform.
 
 The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data, 4 pilots), demonstrating a more advanced, real-world system like Wi-Fi 6. It covers Gray-coded symbol mapping, full OFDM frame assembly, power normalization, and cyclic prefix addition, helping students connect theoretical concepts to the structure of modern wireless communications.
-
+[***^***](#introduction-and-motivation)
 1 - [***Glossary of Key Terms***](#glossary-of-key-terms)  \
 2 - [***Variable Meanings***](#variable-meanings)  \
 3 - [***Table of Contents (Modulador 16QAM 4OFDM)***](#toc-modulador-16qam-4ofdm) \
