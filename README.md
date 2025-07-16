@@ -279,7 +279,7 @@ This script simulates the end-to-end operation of the digital transmitter side o
 3. Time Layer → Transmission Signal
    Converts to time domain via IFFT and adds a cyclic prefix to combat inter-symbol interference (ISI).
 
-[***^***](#introduction-and-motivation)
+[**>**](#introduction-and-motivation)
 
 Summary pipeline:
 raw bits → symbols → spectrum → time-domain signal ready for antenna
@@ -297,7 +297,7 @@ It:
 Its purpose is to help understand digital transformations at the transmitter, exploring concepts like symbol mapping, OFDM assembly, and spectral analysis.
 
 
-[***^***](#introduction-and-motivation)
+[**>**](#introduction-and-motivation)
 
 # Description of the Six Activities in the 802.11ax Modulator with 64-QAM
    
@@ -316,7 +316,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Technical reflection:`**
    Without normalization, simulations would distort gain, efficiency, and BER evaluations. In real systems, every dB counts.
    
-[***^***](#introduction-and-motivation)
+[**>**](#introduction-and-motivation)
 
 ---
 
@@ -333,7 +333,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Didactic analogy:`**
    It is like translating words into map coordinates — without this step, you cannot turn digital information into physical signals.
 
-[***^***](#introduction-and-motivation)
+[**>**](#introduction-and-motivation)
 
 ---
 
@@ -350,7 +350,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Technical reflection:`**
    In research and teaching, a good plot is worth a thousand words. It reveals distortions, symmetries, or bugs.
    
-[**>***](#toc-modulador-80211ax-64qam) 
+[**>**](#toc-modulador-80211ax-64qam) 
 
 ---
 ## 6.4 Build IFFT Vector
@@ -366,7 +366,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Technical note:`**
    Indices like N-26, N-25 represent negative subcarriers centered at zero, following FFT conventions.
    
-[**>***](#toc-modulador-80211ax-64qam) 
+[**>**](#toc-modulador-80211ax-64qam) 
 
 ---
 ## 6.5 Plot Spectrum
@@ -382,7 +382,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Engineering reflection:`**
    The spectrum is the system’s fingerprint. Any allocation failure shows up here. 
    
-[**>***](#toc-modulador-80211ax-64qam) 
+[**>**](#toc-modulador-80211ax-64qam) 
 
 ---
 ## 6.6 Modulate OFDM with IFFT and Cyclic Prefix
@@ -398,7 +398,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Deeper reflection:`**
    The cyclic prefix is an ingenious solution: it sacrifices some spectral efficiency to massively increase robustness — a classic engineering trade-off between practicality and efficiency.
    
-[**>***](#toc-modulador-80211ax-64qam) 
+[**>**](#toc-modulador-80211ax-64qam) 
 
 ---
 [***^***](#introduction-and-motivation)
