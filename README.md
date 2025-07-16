@@ -11,7 +11,7 @@ The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data
 3 - [***Table of Contents (Modulador 16QAM 4OFDM)***](#toc-modulador-16qam-4ofdm) \
 4 - [***Table of Contents (Modulador 802.11ax 64QAM)***](#toc-modulador-80211ax-64qam) \
 5 - [***Conclusion***](#conclusion) \
-6 - [***Reflection***](#Reflection) \
+6 - [***Reflection***](#Reflection) 
 ---
 # **Glossary of Key Terms**
 
