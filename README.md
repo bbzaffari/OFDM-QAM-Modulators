@@ -15,7 +15,6 @@ The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data
 ---
 # **Glossary of Key Terms**
 
-
 ### **QAM (Quadrature Amplitude Modulation)**
 
 A **modulation technique** that combines amplitude and phase variations along two orthogonal axes — **I (in-phase)** and **Q (quadrature)** — to represent digital data in analog signals.
@@ -155,6 +154,8 @@ Benefits:
    5.6 [IFFT Execution (Time-Domain Signal Generation)](#ifft-execution-time-domain-signal-generation)  
    5.7 [Spectrum Plot](#spectrum-plot)  
    5.8 [Time-Domain Signal Plot](#time-domain-signal-plot)  
+  
+[***^***](#introduction-and-motivation)
 
 # In a Nutshell (Modulador 16QAM 4OFDM)
 
@@ -168,7 +169,7 @@ We developed and analyzed a modulation system combining [***16QAM***](#glossary-
 
 The goal was to understand how binary data becomes a transmitted signal, following each classic stage of a digital transmitter.
 
-[***^***](#introduction-and-motivation)
+[**>***](#toc-modulador-16qam-4ofdm) 
 
 # **Step-by-Step Summary (Bullet Points of Internal Activities)**
 
@@ -178,7 +179,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Each 4-bit block corresponds to a 16QAM symbol.
 ---
 
-[***^***](#introduction-and-motivation)
+[**>***](#toc-modulador-16qam-4ofdm) 
 
 ## 5.2. 16QAM Mapping (Modulation)
 
@@ -187,39 +188,44 @@ The goal was to understand how binary data becomes a transmitted signal, followi
      * I/Q values for plotting.
      * Amplitude A\_j and phase theta\_j for symbol calculation.
    * Computes s = A\_j \* e^(j^theta\_j).
-
-[***^***](#introduction-and-motivation)
-
+[**>***](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.3. Detailed Symbol Output
 
    * Prints per-symbol details:
 
      * Bits, I/Q values, A\_j, theta\_j, complex result.
+[**>***](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.4. 16QAM[*** ***](#glossary-of-key-terms)    Constellation Plot
 
    * Graph of all 16 constellation points.
    * Marks active (used) symbols.
    * Labels each with its 4-bit input.
+[**>***](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.5. IFFT Vector Construction (OFDM)
 
    * Groups 16QAM symbols into sets of 4 (subcarriers).
    * Prepares X\[k] vector.
+[**>***](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.6. IFFT Execution (Time-Domain Signal Generation)
 
    * Computes x\[n] = IFFT(X\[k]).
+[**>***](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.7. Spectrum Plot
 
    * Stem plot showing |X\[k]| per subcarrier.
+[**>***](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.8. Time-Domain Signal Plot
 
    * Graphs real part over time.
    * Indicates OFDM block divisions.
+[**>***](#toc-modulador-16qam-4ofdm) 
+---
 
 [***^***](#introduction-and-motivation)
 
@@ -238,6 +244,8 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    - [6.4 Build IFFT Vector](#64-build-ifft-vector)  
    - [6.5 Plot Spectrum](#65-plot-spectrum)  
    - [6.6 Modulate OFDM with IFFT and Cyclic Prefix](#66-modulate-ofdm-with-ifft-and-cyclic-prefix)
+  
+[***^***](#introduction-and-motivation)
 
 # In a nutshell (Modulador 802.11ax 64QAM)
 
@@ -250,7 +258,7 @@ This document describes a Python script implementing an [***OFDM (Orthogonal Fre
 
 This process allows end-to-end simulation of the digital modulation process, connecting data layers to the physical signal.
 
-[***^***](#introduction-and-motivation)
+[**>**](#introduction-and-motivation)
 
 # General Structure and Layers
 
@@ -335,11 +343,10 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Technical reflection:`**
    In research and teaching, a good plot is worth a thousand words. It reveals distortions, symmetries, or bugs.
-
-[***^***](#introduction-and-motivation)
    
----
+[**>***](#toc-modulador-80211ax-64qam) 
 
+---
 ## 6.4 Build IFFT Vector
    
    - **Function:** `construir_vetor_ifft`
@@ -352,11 +359,10 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Technical note:`**
    Indices like N-26, N-25 represent negative subcarriers centered at zero, following FFT conventions.
-
-[***^***](#introduction-and-motivation)
    
----
+[**>***](#toc-modulador-80211ax-64qam) 
 
+---
 ## 6.5 Plot Spectrum
 
    - **Function:** `plotar_espectro`
@@ -368,12 +374,11 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    Enables checking spectral occupancy, spotting unexpected holes, and understanding the signal envelope before time conversion.
 
    **`Engineering reflection:`**
-   The spectrum is the system’s fingerprint. Any allocation failure shows up here.
-
-[***^***](#introduction-and-motivation)
+   The spectrum is the system’s fingerprint. Any allocation failure shows up here. 
    
----
+[**>***](#toc-modulador-80211ax-64qam) 
 
+---
 ## 6.6 Modulate OFDM with IFFT and Cyclic Prefix
 
    - **Function:** `modular_ofdm`
@@ -386,7 +391,10 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Deeper reflection:`**
    The cyclic prefix is an ingenious solution: it sacrifices some spectral efficiency to massively increase robustness — a classic engineering trade-off between practicality and efficiency.
+   
+[**>***](#toc-modulador-80211ax-64qam) 
 
+---
 [***^***](#introduction-and-motivation)
 
 ---
