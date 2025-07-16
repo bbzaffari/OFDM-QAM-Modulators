@@ -14,16 +14,114 @@ The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data
 # **Glossary of Key Terms (Background Knowledge)**
 
 
-* **QAM (Quadrature Amplitude Modulation):** Modulation technique combining amplitude and phase variations on two axes (I: in-phase, Q: quadrature) to represent data. For example, 16QAM uses 16 constellation points (4 bits/symbol), while 64QAM uses 64 points (6 bits/symbol).
-* **OFDM (Orthogonal Frequency Division Multiplexing):** Transmission method that splits data across many closely spaced, orthogonal subcarriers, improving spectral efficiency and resistance to multipath fading and interference.
-* **64-QAM:** A specific QAM modulation scheme using 64 points, encoding 6 bits per symbol, balancing data rate and noise sensitivity.
-* **Symbol:** A complex-valued unit (real + imaginary part) used to carry multiple bits, typically represented on a constellation diagram.
-* **IFFT (Inverse Fast Fourier Transform):** Algorithm converting frequency-domain data (per subcarrier) into a time-domain signal, producing the composite OFDM waveform.
-* **Cyclic Prefix (CP):** A copied portion from the end of an OFDM symbol, inserted at its beginning to combat inter-symbol interference (ISI) caused by channel delay spread.
-* **Pilot Subcarriers (Pilots):** Known reference signals inserted among data subcarriers, used at the receiver for synchronization, channel estimation, and correction.
-* **802.11ax (Wi-Fi 6):** The sixth generation Wi-Fi standard, introducing OFDMA (Orthogonal Frequency Division Multiple Access), higher spectral efficiency, and improved multi-user performance.
-* **Subcarriers:** Narrow-band carriers within the total transmission bandwidth, each independently modulated with symbols (QAM) in OFDM systems.
-* **Gray Mapping:** Bit-to-symbol assignment technique where adjacent symbols differ by only one bit, reducing the likelihood of multiple bit errors from noise.
+### **QAM (Quadrature Amplitude Modulation)**
+
+A **modulation technique** that combines amplitude and phase variations along two orthogonal axes — **I (in-phase)** and **Q (quadrature)** — to represent digital data in analog signals.
+For example:
+
+* **16QAM** → 16 distinct constellation points → encodes **4 bits/symbol**.
+* **64QAM** → 64 points → encodes **6 bits/symbol**.
+
+This approach increases spectral efficiency but also raises sensitivity to noise.
+QAM is widely used in cable modems, 4G/5G networks, and digital TV.
+
+> **Reflection:** Think of QAM like placing markers on a 2D map — the more markers, the more info per spot, but also the more precision needed to locate them reliably.
+
+### **OFDM (Orthogonal Frequency Division Multiplexing)**
+
+A **transmission scheme** that splits data across many narrow, closely spaced, **orthogonal subcarriers**. Each subcarrier carries a low-rate stream, but combined, they form a high-rate, robust signal.
+
+Benefits:
+
+* High **spectral efficiency**.
+* Resistance to **multipath fading** and interference.
+* Simplifies equalization in dispersive channels.
+
+Used in Wi-Fi (802.11a/g/n/ac/ax), LTE, DVB-T, and ADSL.
+
+> **Historical note:** OFDM emerged from research in the 1960s but became practical only with modern DSPs capable of fast IFFT computations.
+
+### **64-QAM**
+
+A specific **QAM variant** with 64 constellation points arranged in an 8x8 grid. Each symbol carries **6 bits**.
+
+It offers:
+
+* High data rates.
+* Greater susceptibility to noise and distortion compared to lower-order QAM like 16QAM.
+
+> **Example:** LTE and Wi-Fi 802.11ax use adaptive modulation: under good signal conditions, they switch to 64-QAM or 256-QAM; under poor conditions, they fall back to 16QAM or QPSK.
+
+### **Symbol**
+
+A **complex-valued unit** (real + imaginary part) representing one or more bits after modulation. In QAM, each symbol is visualized as a point in a **constellation diagram**.
+
+> **Analogy:** A symbol is like a word in a sentence — it's a unit of meaning that carries a bundled package of bits.
+
+### **IFFT (Inverse Fast Fourier Transform)**
+
+An **algorithm** that converts frequency-domain data (amplitudes/phases per subcarrier) into a composite time-domain signal, synthesizing the OFDM waveform.
+
+* Efficient implementation thanks to **FFT algorithms**.
+* Key for assembling all subcarrier contributions into a single transmit signal.
+
+> **Example:** Without IFFT, generating OFDM would require summing thousands of sines manually — computationally unfeasible.
+
+### **Cyclic Prefix (CP)**
+
+A **guard interval** created by copying the end portion of an OFDM symbol and appending it to the beginning.
+
+Purpose:
+
+* Absorb **delayed echoes** (ISI — Inter-Symbol Interference).
+* Preserve orthogonality between subcarriers.
+
+> **Reflection:** Think of CP as adding a shock absorber to a car — it doesn't carry new data but makes the journey smoother and protects against “bumps” in the channel.
+
+### **Pilot Subcarriers (Pilots)**
+
+Known **reference signals** inserted at fixed subcarrier positions among the data carriers.
+
+Functions at the receiver:
+
+* Synchronization (time/frequency).
+* Channel estimation (tracking amplitude/phase distortions).
+* Error correction adjustments.
+
+> **Analogy:** Pilots are like road signs — they don’t carry your cargo, but they help you navigate the highway safely.
+
+### **802.11ax (Wi-Fi 6)**
+
+The **sixth generation Wi-Fi standard**, focusing on:
+
+* **OFDMA (Orthogonal Frequency Division Multiple Access)** for multi-user efficiency.
+* Higher **throughput and spectral efficiency**.
+* Target Wake Time (TWT) to extend battery life of devices.
+* Better performance in crowded environments.
+
+> **Context:** Wi-Fi 6 is crucial for the IoT era, where dozens of devices (phones, TVs, sensors) compete for airtime.
+
+### **Subcarriers**
+
+Narrow-bandwidth carriers that divide the total transmission bandwidth in OFDM systems.
+
+* Each subcarrier is modulated independently (e.g., with QAM symbols).
+* Their orthogonality ensures no interference despite tight packing.
+
+> **Analogy:** Imagine musicians in an orchestra playing different notes — orthogonality ensures they harmonize instead of clashing.
+
+### **Gray Mapping**
+
+A **bit-to-symbol assignment strategy** where adjacent constellation points differ by only **one bit**.
+
+Benefits:
+
+* Minimizes **bit error rate** under noisy conditions.
+* A single symbol error likely flips just **one bit**.
+
+> **Reflection:** Gray mapping is like designing a keyboard where neighboring keys cause minimal typos — small slips lead to minor, not catastrophic, errors.
+
+---
 ---
 
 # **Variable Meanings:**
