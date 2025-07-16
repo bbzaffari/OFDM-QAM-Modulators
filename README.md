@@ -136,7 +136,7 @@ Benefits:
 ---
 # TOC (Modulador 16QAM 4OFDM)
 1. [In a Nutshell (Modulador 16QAM 4OFDM)](#in-a-nutshell-modulador-16qam-4ofdm)  
-2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms-background-knowledge)  
+2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms)   
 3. - [***Variable Meanings***](#variable-meanings)  
 4. [General Summary of What Was Done](#general-summary-of-what-was-done-16qam-with-4-ofdm-subcarriers)  
 5. [Step-by-Step Summary (Bullet Points of Internal Activities)](#step-by-step-summary-bullet-points-of-internal-activities)  
@@ -151,11 +151,11 @@ Benefits:
 
 # In a Nutshell (Modulador 16QAM 4OFDM)
 
-This document provides a brief introduction and summary of a classroom activity designed to demonstrate how digital communication systems work in practice. The focus is on a simple transmitter using [***16QAM***](#glossary-of-key-terms-background-knowledge)  modulation combined with [***OFDM***](#glossary-of-key-terms-background-knowledge)  over [***4 subcarriers***](#glossary-of-key-terms-background-knowledge). The goal is to help readers, especially students, understand how binary data is processed and transformed step by step into a physical signal ready for transmission. The explanation includes key background concepts, definitions of variables, and a clear breakdown of the operations performed in the provided Python code.
+This document provides a brief introduction and summary of a classroom activity designed to demonstrate how digital communication systems work in practice. The focus is on a simple transmitter using [***16QAM***](#glossary-of-key-terms)   modulation combined with [***OFDM***](#glossary-of-key-terms)   over [***4 subcarriers***](#glossary-of-key-terms-background-knowledge). The goal is to help readers, especially students, understand how binary data is processed and transformed step by step into a physical signal ready for transmission. The explanation includes key background concepts, definitions of variables, and a clear breakdown of the operations performed in the provided Python code.
 
 # **General Summary of What Was Done (16QAM with 4 OFDM Subcarriers)**
 
-We developed and analyzed a modulation system combining [***16QAM***](#glossary-of-key-terms-background-knowledge) with [***OFDM***](#glossary-of-key-terms-background-knowledge) using [***4 subcarriers***](#glossary-of-key-terms-background-knowledge). The idea was to take a 64-bit binary sequence, modulate it into [***16QAM symbols***](#glossary-of-key-terms-background-knowledge), organize these symbols into [***OFDM***](#glossary-of-key-terms-background-knowledge)  subcarriers, generate the time-domain signal via IFFT, and visualize all intermediate steps both numerically and graphically.
+We developed and analyzed a modulation system combining [***16QAM***](#glossary-of-key-terms)  with [***OFDM***](#glossary-of-key-terms)  using [***4 subcarriers***](#glossary-of-key-terms-background-knowledge). The idea was to take a 64-bit binary sequence, modulate it into [***16QAM symbols***](#glossary-of-key-terms-background-knowledge), organize these symbols into [***OFDM***](#glossary-of-key-terms)   subcarriers, generate the time-domain signal via IFFT, and visualize all intermediate steps both numerically and graphically.
 
 The goal was to understand how binary data becomes a transmitted signal, following each classic stage of a digital transmitter.
 
@@ -180,7 +180,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 
      * Bits, I/Q values, A\_j, theta\_j, complex result.
 ---
-## 5.4. 16QAM[*** ***](#glossary-of-key-terms-background-knowledge)   Constellation Plot
+## 5.4. 16QAM[*** ***](#glossary-of-key-terms)    Constellation Plot
 
    * Graph of all 16 constellation points.
    * Marks active (used) symbols.
@@ -204,10 +204,10 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Graphs real part over time.
    * Indicates OFDM block divisions.
 ---
-# **TOC (Modulador 802.11ax[*** ***](#glossary-of-key-terms-background-knowledge)   64QAM)**
+# **TOC (Modulador 802.11ax[*** ***](#glossary-of-key-terms)    64QAM)**
 
 1. [In a nutshell (Modulador 802.11ax 64QAM)](#in-a-nutshell-modulador-80211ax-64qam)
-2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms-background-knowledge)  
+2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms)   
 3. - [***Variable Meanings***](#variable-meanings)  
 4. [General Structure and Layers](#general-structure-and-layers)  
 5. [Disclaimer: Didactic Limitations](#disclaimer-didactic-limitations)  
@@ -221,10 +221,10 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 
 # In a nutshell (Modulador 802.11ax 64QAM)
 
-This document describes a Python script implementing an [***OFDM (Orthogonal Frequency Division Multiplexing)***](#glossary-of-key-terms-background-knowledge)   modulator following the  [***802.11ax (Wi-Fi 6)***](#glossary-of-key-terms-background-knowledge)  standard with 64-QAM modulation. It explains the general structure, technical layers, limitations, glossary of key terms, and details of six core activities included in the script. It generates:
+This document describes a Python script implementing an [***OFDM (Orthogonal Frequency Division Multiplexing)***](#glossary-of-key-terms)    modulator following the  [***802.11ax (Wi-Fi 6)***](#glossary-of-key-terms)   standard with 64-QAM modulation. It explains the general structure, technical layers, limitations, glossary of key terms, and details of six core activities included in the script. It generates:
 
 * Symbol mapping
-* [***IFFT***](#glossary-of-key-terms-background-knowledge) vector assembly (OFDM base)
+* [***IFFT***](#glossary-of-key-terms)  vector assembly (OFDM base)
 * Frequency spectrum
 * Final OFDM symbol with cyclic prefix
 
