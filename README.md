@@ -15,7 +15,7 @@ The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data
 ---
 # **Glossary of Key Terms**
 
-### **QAM (Quadrature Amplitude Modulation)**
+### **1. QAM (Quadrature Amplitude Modulation)**
 
 A **modulation technique** that combines amplitude and phase variations along two orthogonal axes — **I (in-phase)** and **Q (quadrature)** — to represent digital data in analog signals.
 For example:
@@ -27,8 +27,8 @@ This approach increases spectral efficiency but also raises sensitivity to noise
 QAM is widely used in cable modems, 4G/5G networks, and digital TV.
 
 > **Reflection:** Think of QAM like placing markers on a 2D map — the more markers, the more info per spot, but also the more precision needed to locate them reliably.
-
-### **OFDM (Orthogonal Frequency Division Multiplexing)**
+[**>**](#glossary-of-key-terms)  
+### **2. OFDM (Orthogonal Frequency Division Multiplexing)**
 
 A **transmission scheme** that splits data across many narrow, closely spaced, **orthogonal subcarriers**. Each subcarrier carries a low-rate stream, but combined, they form a high-rate, robust signal.
 
@@ -41,8 +41,8 @@ Benefits:
 Used in Wi-Fi (802.11a/g/n/ac/ax), LTE, DVB-T, and ADSL.
 
 > **Historical note:** OFDM emerged from research in the 1960s but became practical only with modern DSPs capable of fast IFFT computations.
-
-### **64-QAM**
+[**>**](#glossary-of-key-terms)  
+### **3. 64-QAM**
 
 A specific **QAM variant** with 64 constellation points arranged in an 8x8 grid. Each symbol carries **6 bits**.
 
@@ -52,14 +52,14 @@ It offers:
 * Greater susceptibility to noise and distortion compared to lower-order QAM like 16QAM.
 
 > **Example:** LTE and Wi-Fi 802.11ax use adaptive modulation: under good signal conditions, they switch to 64-QAM or 256-QAM; under poor conditions, they fall back to 16QAM or QPSK.
-
-### **Symbol**
+[**>**](#glossary-of-key-terms)  
+### **4. Symbol**
 
 A **complex-valued unit** (real + imaginary part) representing one or more bits after modulation. In QAM, each symbol is visualized as a point in a **constellation diagram**.
 
 > **Analogy:** A symbol is like a word in a sentence — it's a unit of meaning that carries a bundled package of bits.
 
-### **IFFT (Inverse Fast Fourier Transform)**
+### **5. IFFT (Inverse Fast Fourier Transform)**
 
 An **algorithm** that converts frequency-domain data (amplitudes/phases per subcarrier) into a composite time-domain signal, synthesizing the OFDM waveform.
 
@@ -67,8 +67,8 @@ An **algorithm** that converts frequency-domain data (amplitudes/phases per subc
 * Key for assembling all subcarrier contributions into a single transmit signal.
 
 > **Example:** Without IFFT, generating OFDM would require summing thousands of sines manually — computationally unfeasible.
-
-### **Cyclic Prefix (CP)**
+[**>**](#glossary-of-key-terms)  
+### **6. Cyclic Prefix (CP)**
 
 A **guard interval** created by copying the end portion of an OFDM symbol and appending it to the beginning.
 
@@ -78,8 +78,8 @@ Purpose:
 * Preserve orthogonality between subcarriers.
 
 > **Reflection:** Think of CP as adding a shock absorber to a car — it doesn't carry new data but makes the journey smoother and protects against “bumps” in the channel.
-
-### **Pilot Subcarriers (Pilots)**
+[**>**](#glossary-of-key-terms)  
+### **7. Pilot Subcarriers (Pilots)**
 
 Known **reference signals** inserted at fixed subcarrier positions among the data carriers.
 
@@ -90,8 +90,8 @@ Functions at the receiver:
 * Error correction adjustments.
 
 > **Analogy:** Pilots are like road signs — they don’t carry your cargo, but they help you navigate the highway safely.
-
-### **802.11ax (Wi-Fi 6)**
+[**>**](#glossary-of-key-terms)  
+### **8. 802.11ax (Wi-Fi 6)**
 
 The **sixth generation Wi-Fi standard**, focusing on:
 
@@ -101,8 +101,8 @@ The **sixth generation Wi-Fi standard**, focusing on:
 * Better performance in crowded environments.
 
 > **Context:** Wi-Fi 6 is crucial for the IoT era, where dozens of devices (phones, TVs, sensors) compete for airtime.
-
-### **Subcarriers**
+[**>**](#glossary-of-key-terms)  
+### **9. Subcarriers**
 
 Narrow-bandwidth carriers that divide the total transmission bandwidth in OFDM systems.
 
@@ -110,8 +110,8 @@ Narrow-bandwidth carriers that divide the total transmission bandwidth in OFDM s
 * Their orthogonality ensures no interference despite tight packing.
 
 > **Analogy:** Imagine musicians in an orchestra playing different notes — orthogonality ensures they harmonize instead of clashing.
-
-### **Gray Mapping**
+[**>**](#glossary-of-key-terms)  
+### **10. Gray Mapping**
 
 A **bit-to-symbol assignment strategy** where adjacent constellation points differ by only **one bit**.
 
@@ -121,7 +121,10 @@ Benefits:
 * A single symbol error likely flips just **one bit**.
 
 > **Reflection:** Gray mapping is like designing a keyboard where neighboring keys cause minimal typos — small slips lead to minor, not catastrophic, errors.
+[**>**](#glossary-of-key-terms)
 
+
+---
 [***^***](#introduction-and-motivation)
 
 ---
@@ -140,20 +143,22 @@ Benefits:
 [***^***](#introduction-and-motivation)
 
 ---
+---
+
 # TOC (Modulador 16QAM 4OFDM)
 1. [In a Nutshell (Modulador 16QAM 4OFDM)](#in-a-nutshell-modulador-16qam-4ofdm)  
 2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms)   
 3. - [***Variable Meanings***](#variable-meanings)  
 4. [General Summary of What Was Done](#general-summary-of-what-was-done-16qam-with-4-ofdm-subcarriers)  
 5. [Step-by-Step Summary (Bullet Points of Internal Activities)](#step-by-step-summary-bullet-points-of-internal-activities)  
-   5.1 [Decimal-to-binary conversion (64 bits)](#decimal-to-binary-conversion-64-bits)  
-   5.2 [16QAM Mapping (Modulation)](#16qam-mapping-modulation)  
-   5.3 [Detailed Symbol Output](#detailed-symbol-output)  
-   5.4 [16QAM Constellation Plot](#16qam-constellation-plot)  
-   5.5 [IFFT Vector Construction (OFDM)](#ifft-vector-construction-ofdm)  
-   5.6 [IFFT Execution (Time-Domain Signal Generation)](#ifft-execution-time-domain-signal-generation)  
-   5.7 [Spectrum Plot](#spectrum-plot)  
-   5.8 [Time-Domain Signal Plot](#time-domain-signal-plot)  
+   - [5.1 Decimal-to-binary conversion (64 bits)](#decimal-to-binary-conversion-64-bits)  
+   - [5.2 16QAM Mapping (Modulation)](#16qam-mapping-modulation)  
+   - [5.3 Detailed Symbol Output](#detailed-symbol-output)  
+   - [5.4 16QAM Constellation Plot](#16qam-constellation-plot)  
+   - [5.5 IFFT Vector Construction (OFDM)](#ifft-vector-construction-ofdm)  
+   - [5.6 IFFT Execution (Time-Domain Signal Generation)](#ifft-execution-time-domain-signal-generation)  
+   - [5.7 Spectrum Plot](#spectrum-plot)  
+   - [5.8 Time-Domain Signal Plot](#time-domain-signal-plot)  
   
 [***^***](#introduction-and-motivation)
 
