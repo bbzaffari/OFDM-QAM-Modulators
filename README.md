@@ -10,6 +10,8 @@ The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data
 - [***Variable Meanings***](#variable-meanings)  
 - [***Table of Contents (Modulador 16QAM 4OFDM)***](#toc-modulador-16qam-4ofdm)
 - [***Table of Contents (Modulador 802.11ax 64QAM)***](#toc-modulador-80211ax-64qam)
+- [***Conclusion***](#conclusion)
+- [***Reflection***](#Reflection)
 ---
 # **Glossary of Key Terms**
 
@@ -350,4 +352,37 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 
    **`Deeper reflection:`**
    The cyclic prefix is an ingenious solution: it sacrifices some spectral efficiency to massively increase robustness — a classic engineering trade-off between practicality and efficiency.
+
+---
+---
+---
+
+# Conclusion
+
+This project provided a practical implementation of fundamental concepts in digital modulation and Orthogonal Frequency Division Multiplexing (OFDM), using didactic Python scripts for two cases: **16QAM with 4 subcarriers** and **64QAM following the 802.11ax (Wi-Fi 6) standard**.
+
+               Through the development and analysis of these modulators, we were able to explore:
+
+1. How binary streams are mapped into complex-valued symbols using Quadrature Amplitude Modulation (QAM), applying **Gray Mapping** to minimize bit errors;  
+2. How OFDM organizes these symbols over orthogonal subcarriers, using the **Inverse Fast Fourier Transform (IFFT)** to convert from frequency to time domain;  
+3. The role of the **Cyclic Prefix (CP)** in mitigating inter-symbol interference (ISI), improving robustness over multipath channels;  
+4. How **pilot subcarriers** help with receiver-side synchronization, channel estimation, and equalization, ensuring reliable communication.
+
+The Python codes not only allowed generation and visualization of constellation diagrams but also provided detailed inspection of the input/output vectors, offering a step-by-step demonstration of how raw data is transformed during the modulation process.
+
+This experience reinforces the essential role of computational simulation in learning modern communication systems, bridging theoretical understanding with hands-on practice. It also highlights the technological progress up to the 802.11ax standard, which incorporates **64QAM**, **Orthogonal Frequency Division Multiple Access (OFDMA)**, and advanced spectral efficiency techniques to support multiple users and high data rates.
+
+---
+
+# Reflection
+
+Mastering these fundamental building blocks opens the door to more advanced challenges, such as:
+
+- Implementing **Additive White Gaussian Noise (AWGN)** in simulations to study system resilience under noisy conditions;
+- Adding **selective fading channel models** to simulate real-world multipath propagation effects;
+- Analyzing **Bit Error Rate (BER)** performance curves for different modulation schemes (e.g., comparing 16QAM vs. 64QAM) under varying signal-to-noise ratios (SNR);
+- Exploring **Software-Defined Radio (SDR)** platforms to implement these algorithms in real-time on hardware, enabling over-the-air transmission and reception.
+
+
+
 
