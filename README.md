@@ -82,7 +82,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 
      * Bits, I/Q values, A\_j, theta\_j, complex result.
 ---
-## 5.4. 16QAM Constellation Plot
+## 5.4. 16QAM[*** ***](#glossary-of-key-terms-background-knowledge)   Constellation Plot
 
    * Graph of all 16 constellation points.
    * Marks active (used) symbols.
@@ -106,7 +106,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Graphs real part over time.
    * Indicates OFDM block divisions.
 ---
-# **TOC (Modulador 802.11ax 64QAM)**
+# **TOC (Modulador 802.11ax[*** ***](#glossary-of-key-terms-background-knowledge)   64QAM)**
 
 1. [In a nutshell (Modulador 802.11ax 64QAM)](#in-a-nutshell-modulador-80211ax-64qam)
 2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms-background-knowledge)  
@@ -123,12 +123,10 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 
 # In a nutshell (Modulador 802.11ax 64QAM)
 
-This document describes a Python script implementing an OFDM (Orthogonal Frequency Division Multiplexing) modulator following the 802.11ax (Wi-Fi 6) standard with 64-QAM modulation. It explains the general structure, technical layers, limitations, glossary of key terms, and details of six core activities included in the script.
-
-This script implements an OFDM modulator following the 802.11ax (Wi-Fi 6) standard, using 64-QAM (Quadrature Amplitude Modulation) with 48 data subcarriers. It generates:
+This document describes a Python script implementing an [***OFDM (Orthogonal Frequency Division Multiplexing)***](#glossary-of-key-terms-background-knowledge)   modulator following the  [***802.11ax (Wi-Fi 6)***](#glossary-of-key-terms-background-knowledge)  standard with 64-QAM modulation. It explains the general structure, technical layers, limitations, glossary of key terms, and details of six core activities included in the script. It generates:
 
 * Symbol mapping
-* IFFT vector assembly (OFDM base)
+* [***IFFT***](#glossary-of-key-terms-background-knowledge) vector assembly (OFDM base)
 * Frequency spectrum
 * Final OFDM symbol with cyclic prefix
 
