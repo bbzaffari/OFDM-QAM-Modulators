@@ -58,7 +58,7 @@ It offers:
 A **complex-valued unit** (real + imaginary part) representing one or more bits after modulation. In QAM, each symbol is visualized as a point in a **constellation diagram**.
 
 > **Analogy:** A symbol is like a word in a sentence — it's a unit of meaning that carries a bundled package of bits.
-
+[**>**](#glossary-of-key-terms)  
 ### **5. IFFT (Inverse Fast Fourier Transform)**
 
 An **algorithm** that converts frequency-domain data (amplitudes/phases per subcarrier) into a composite time-domain signal, synthesizing the OFDM waveform.
@@ -174,7 +174,7 @@ We developed and analyzed a modulation system combining [***16QAM***](#glossary-
 
 The goal was to understand how binary data becomes a transmitted signal, following each classic stage of a digital transmitter.
 
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 
 # **Step-by-Step Summary (Bullet Points of Internal Activities)**
 
@@ -184,7 +184,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Each 4-bit block corresponds to a 16QAM symbol.
 ---
 
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 
 ## 5.2. 16QAM Mapping (Modulation)
 
@@ -193,46 +193,47 @@ The goal was to understand how binary data becomes a transmitted signal, followi
      * I/Q values for plotting.
      * Amplitude A\_j and phase theta\_j for symbol calculation.
    * Computes s = A\_j \* e^(j^theta\_j).
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.3. Detailed Symbol Output
 
    * Prints per-symbol details:
 
      * Bits, I/Q values, A\_j, theta\_j, complex result.
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>*](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.4. [***16QAM***](#glossary-of-key-terms) Constellation Plot
 
    * Graph of all 16 constellation points.
    * Marks active (used) symbols.
    * Labels each with its 4-bit input.
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.5. IFFT Vector Construction (OFDM)
 
    * Groups 16QAM symbols into sets of 4 (subcarriers).
    * Prepares X\[k] vector.
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.6. IFFT Execution (Time-Domain Signal Generation)
 
    * Computes x\[n] = IFFT(X\[k]).
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.7. Spectrum Plot
 
    * Stem plot showing |X\[k]| per subcarrier.
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.8. Time-Domain Signal Plot
 
    * Graphs real part over time.
    * Indicates OFDM block divisions.
-[**>***](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm) 
 ---
 
 [***^***](#introduction-and-motivation)
+
 
 ---
 # **TOC (Modulador 802.11ax 64QAM)**
