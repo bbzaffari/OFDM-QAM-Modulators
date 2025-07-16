@@ -197,7 +197,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
      * Bits, I/Q values, A\_j, theta\_j, complex result.
 [**>***](#toc-modulador-16qam-4ofdm) 
 ---
-## 5.4. 16QAM[*** ***](#glossary-of-key-terms)    Constellation Plot
+## 5.4. [***16QAM***](#glossary-of-key-terms) Constellation Plot
 
    * Graph of all 16 constellation points.
    * Marks active (used) symbols.
