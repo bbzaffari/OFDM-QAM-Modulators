@@ -1,3 +1,7 @@
+---
+---
+---
+
 # **Introduction and Motivation**
 
 This activity explores how digital transmitters work using two key setups provided in class.
