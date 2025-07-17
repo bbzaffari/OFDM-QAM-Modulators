@@ -182,10 +182,8 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 
    * Converts user input decimal number to a 64-bit binary string.
    * Each 4-bit block corresponds to a 16QAM symbol.
----
-
 [**>**](#toc-modulador-16qam-4ofdm) 
-
+---
 ## 5.2. 16QAM Mapping (Modulation)
 
    * For each 4-bit group, retrieves:
@@ -200,7 +198,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Prints per-symbol details:
 
      * Bits, I/Q values, A\_j, theta\_j, complex result.
-[**>*](#toc-modulador-16qam-4ofdm) 
+[**>**](#toc-modulador-16qam-4ofdm)
 ---
 ## 5.4. [***16QAM***](#glossary-of-key-terms) Constellation Plot
 
@@ -212,7 +210,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 ## 5.5. IFFT Vector Construction (OFDM)
 
    * Groups 16QAM symbols into sets of 4 (subcarriers).
-   * Prepares X\[k] vector.
+   * Prepares X\[k] vector. \
 [**>**](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.6. IFFT Execution (Time-Domain Signal Generation)
@@ -230,6 +228,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Graphs real part over time.
    * Indicates OFDM block divisions.
 [**>**](#toc-modulador-16qam-4ofdm) 
+---
 ---
 
 [***^***](#introduction-and-motivation)
