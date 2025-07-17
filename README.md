@@ -229,11 +229,11 @@ The goal was to understand how binary data becomes a transmitted signal, followi
    * Indicates OFDM block divisions.
 [**>**](#toc-modulador-16qam-4ofdm) 
 ---
----
+
 
 [***^***](#introduction-and-motivation)
 
-
+---
 ---
 # **TOC (Modulador 802.11ax 64QAM)**
 
