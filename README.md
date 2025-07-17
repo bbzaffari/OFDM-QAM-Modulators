@@ -210,7 +210,7 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 ## 5.5. IFFT Vector Construction (OFDM)
 
    * Groups 16QAM symbols into sets of 4 (subcarriers).
-   * Prepares X\[k] vector. \
+   * Prepares X\[k] vector. 
 [**>**](#toc-modulador-16qam-4ofdm) 
 ---
 ## 5.6. IFFT Execution (Time-Domain Signal Generation)
