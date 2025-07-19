@@ -165,7 +165,7 @@ Benefits:
 ---
 
 # TOC (Modulador 16QAM 4OFDM)
-| [<](#variable-meaning) | [>](#toc-modulador-80211ax-64qam) |
+| [<](#variable-meanings) | [>](#toc-modulador-80211ax-64qam) |
 |-------------|-------------------------|
 
 1. [In a Nutshell (Modulador 16QAM 4OFDM)](#in-a-nutshell-modulador-16qam-4ofdm)  
