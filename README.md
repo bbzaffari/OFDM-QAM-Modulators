@@ -15,13 +15,14 @@ The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data
 3 - [***Table of Contents (Modulador 16QAM 4OFDM)***](#toc-modulador-16qam-4ofdm) \
 4 - [***Table of Contents (Modulador 802.11ax 64QAM)***](#toc-modulador-80211ax-64qam) \
 5 - [***Conclusion***](#conclusion) \
-6 - [***Reflection***](#Reflection) 
+6 - [***Reflection***](#reflection) 
+
 ---
 # **Glossary of Key Terms**
 [**<**](#glossary-of-key-terms)  
-
+| [<](#introduction-and-motivation) | [>](#variable-meanings) |
+|-------------|-------------------------|
 ### **1. QAM (Quadrature Amplitude Modulation)**
-
 A **modulation technique** that combines amplitude and phase variations along two orthogonal axes — **I (in-phase)** and **Q (quadrature)** — to represent digital data in analog signals.
 For example:
 
@@ -136,6 +137,8 @@ Benefits:
 ---
 
 # **Variable Meanings:**
+| [<](#glossary-of-key-terms) | [>](#toc-modulador-16qam-4ofdm) |
+|-------------|-------------------------|
 
 * **I:** In-phase component (real part of the symbol).
 * **Q:** Quadrature component (imaginary part of the symbol).
@@ -151,7 +154,9 @@ Benefits:
 ---
 
 # TOC (Modulador 16QAM 4OFDM)
-[**<**](#toc-modulador-16qam-4ofdm) 
+| [<](#variable-meaning) | [>](#toc-modulador-80211ax-64qam) |
+|-------------|-------------------------|
+
 1. [In a Nutshell (Modulador 16QAM 4OFDM)](#in-a-nutshell-modulador-16qam-4ofdm)  
 2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms)   
 3. - [***Variable Meanings***](#variable-meanings)  
@@ -242,7 +247,9 @@ The goal was to understand how binary data becomes a transmitted signal, followi
 ---
 ---
 # **TOC (Modulador 802.11ax 64QAM)**
-[**<**](#toc-modulador-80211ax-64qam) 
+| [<](#toc-modulador-16qam-4ofdm) | [>](#conclusion) |
+|-------------|-------------------------|
+
 1. [In a nutshell (Modulador 802.11ax 64QAM)](#in-a-nutshell-modulador-80211ax-64qam)
 2. - [***Glossary of Key Terms (Background Knowledge)***](#glossary-of-key-terms)   
 3. - [***Variable Meanings***](#variable-meanings)  
@@ -269,7 +276,7 @@ This document describes a Python script implementing an [***OFDM (Orthogonal Fre
 
 This process allows end-to-end simulation of the digital modulation process, connecting data layers to the physical signal.
 
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 # General Structure and Layers
 
@@ -284,7 +291,7 @@ This script simulates the end-to-end operation of the digital transmitter side o
 3. Time Layer → Transmission Signal
    Converts to time domain via IFFT and adds a cyclic prefix to combat inter-symbol interference (ISI).
 
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 Summary pipeline:
 raw bits → symbols → spectrum → time-domain signal ready for antenna
@@ -302,7 +309,7 @@ It:
 Its purpose is to help understand digital transformations at the transmitter, exploring concepts like symbol mapping, OFDM assembly, and spectral analysis.
 
 
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 # Description of the Six Activities in the 802.11ax Modulator with 64-QAM
    
@@ -321,7 +328,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Technical reflection:`**
    Without normalization, simulations would distort gain, efficiency, and BER evaluations. In real systems, every dB counts.
    
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 ---
 
@@ -338,7 +345,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Didactic analogy:`**
    It is like translating words into map coordinates — without this step, you cannot turn digital information into physical signals.
 
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 ---
 
@@ -355,7 +362,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Technical reflection:`**
    In research and teaching, a good plot is worth a thousand words. It reveals distortions, symmetries, or bugs.
    
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 ---
 ## 6.4 Build IFFT Vector
@@ -371,7 +378,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Technical note:`**
    Indices like N-26, N-25 represent negative subcarriers centered at zero, following FFT conventions.
    
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 ---
 ## 6.5 Plot Spectrum
@@ -387,7 +394,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Engineering reflection:`**
    The spectrum is the system’s fingerprint. Any allocation failure shows up here. 
    
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 ---
 ## 6.6 Modulate OFDM with IFFT and Cyclic Prefix
@@ -403,7 +410,7 @@ Its purpose is to help understand digital transformations at the transmitter, ex
    **`Deeper reflection:`**
    The cyclic prefix is an ingenious solution: it sacrifices some spectral efficiency to massively increase robustness — a classic engineering trade-off between practicality and efficiency.
    
-[**<**](#toc-modulador-80211ax-64qam) 
+[**.<**](#toc-modulador-80211ax-64qam) 
 
 ---
 [***^***](#introduction-and-motivation)
@@ -413,6 +420,8 @@ Its purpose is to help understand digital transformations at the transmitter, ex
 ---
 
 # Conclusion
+| [<](#toc-modulador-80211ax-64qam) | [>](#reflection) |
+|-------------|-------------------------|
 
 This project provided a practical implementation of fundamental concepts in digital modulation and Orthogonal Frequency Division Multiplexing (OFDM), using didactic Python scripts for two cases: **16QAM with 4 subcarriers** and **64QAM following the 802.11ax (Wi-Fi 6) standard**.
 
@@ -432,6 +441,8 @@ This experience reinforces the essential role of computational simulation in lea
 ---
 
 # Reflection
+| [<](#reflection) | [>](#introduction-and-motivation) |
+|-------------|-------------------------|
 
 Mastering these fundamental building blocks opens the door to more advanced challenges, such as:
 
