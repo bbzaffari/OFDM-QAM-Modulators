@@ -21,6 +21,18 @@ The second follows the 802.11ax standard with 64QAM over 64 subcarriers (48 data
 # **Glossary of Key Terms**
 | [<](#introduction-and-motivation) | [>](#variable-meanings) |
 |-------------|-------------------------|
+
+1. [QAM (Quadrature Amplitude Modulation)](#1-qam-quadrature-amplitude-modulation)
+2. [OFDM (Orthogonal Frequency Division Multiplexing)](#2-ofdm-orthogonal-frequency-division-multiplexing)
+3. [64-QAM](#3-64-qam)
+4. [Symbol](#4-symbol)
+5. [IFFT (Inverse Fast Fourier Transform)](#5-ifft-inverse-fast-fourier-transform)
+6. [Cyclic Prefix (CP)](#6-cyclic-prefix-cp)
+7. [Pilot Subcarriers (Pilots)](#7-pilot-subcarriers-pilots)
+8. [802.11ax (Wi-Fi 6)](#8-80211ax-wi-fi-6)
+9. [Subcarriers](#9-subcarriers)
+10. [Gray Mapping](#10-gray-mapping)
+    
 ### **1. QAM (Quadrature Amplitude Modulation)**
 A **modulation technique** that combines amplitude and phase variations along two orthogonal axes — **I (in-phase)** and **Q (quadrature)** — to represent digital data in analog signals.
 For example:
