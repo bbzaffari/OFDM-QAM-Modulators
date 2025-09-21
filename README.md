@@ -1,4 +1,3 @@
----
 
 [![Badge](https://img.shields.io/badge/Educational%20Purpose-blue?style=for-the-badge&logo=academia)]()
 
